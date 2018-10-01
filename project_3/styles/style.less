@@ -1,0 +1,203 @@
+
+    @import './smart-grid.less';
+    @service_name-background:#2261bf;
+    @service_text-color:#4c4c4c;
+    .reset();
+    html,body{
+        font-size: 16px;
+    }
+    .wrapper{
+        .row-flex();
+        justify-content: center;
+    }
+        .service{
+            .col();
+            .size(3);
+            .size-md(5);
+            .size-xs(10);
+            .size-lg(3);
+
+        }
+    .wrapper{
+        background-color: #f2f2f2;
+    }
+    .service{
+        font-size: 1rem;
+        margin: 3.125em 1.313em 5.625em 1.313em;
+        width: 20.5em;
+        height: 41.625em;
+        text-align: center;
+        .md(margin,15px);
+        .sm(margin,15px);
+        .lg(margin,15px);
+
+        background-color: white;
+        &__name{
+            height: 2.917em;
+            background-color: @service_name-background;
+            position: relative;
+            font-family: Arial;
+            font-weight: bold;
+            color:white;
+            line-height: 2.917em;
+            text-align: center;
+            text-transform: uppercase;
+            font-size:  1.5em;
+              &:after{
+                content: ''; 
+                 position: absolute;
+                 left:47%;
+                 bottom: -0.833em;
+                 border: 0.583em solid transparent; 
+                  border-top: 0.375em solid @service_name-background; 
+                 }
+        }
+        &__description{
+            margin-bottom: 3.5em;
+            font-family: Arial, Regular, sans-serif;
+            color: @service_text-color;
+            margin-top: 1.188em;
+            padding: 0 1.313em 0 1.313em;
+            text-align: left;jk
+        }  
+        &__price{
+            height: 2em;
+            text-align: center;
+            line-height: 2em;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            font-family: Helvetica, Bold;
+            font-size: 1.75em;
+            position: relative;
+            &:before{
+                content: 'СТОИМОСТЬ';
+                position: absolute;
+                color: @service_text-color;
+                background-color: white;
+                font-size: 0.5em;
+                bottom: 3.929em;
+                padding: 0 0.786em;
+                line-height: 0.357em;
+            }
+        }
+        &__discount{ 
+            height:7.500em;
+            width: 17.500em;
+            margin: 3.188em auto 2.875em; 
+            background-color: #e5e5e5;
+            position: relative;
+            border-radius: 0.2em 0.2em 0 0;
+            text-align: center;
+            color: black;
+            &:after{
+                content:'';
+                width: 0;
+                height: 0;
+                position: absolute;
+                bottom: -1.688em;
+                left: 0;
+                border-left: 8.750em solid transparent;
+                border-right: 8.750em solid transparent;
+                border-top: 1.688em solid #e5e5e5;
+            }
+        }
+            &__label{
+                height: 1.750em;
+                width: 2.625em;
+                background-color:@service_name-background;
+                position: relative;
+                margin: auto;
+                border-radius: 0.2em 0.2em 0 0;
+                bottom: 14px;
+                font-family: Arial, bold;
+                font-size: 1em;
+                color: white;
+                text-transform: uppercase;
+                line-height: 1.75em;
+                text-align: center;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    border-left: 1.313em solid transparent;
+                    border-right: 1.313em solid transparent;
+                    border-top: 0.688em solid  @service_name-background;
+                    top: 1.750em;
+                    left: 0;
+                }
+            }
+            &__condition{
+                font-family: Arial;
+                font-size: 0.875em;
+            }
+            &__secprice{
+                font-family: Helvetica,Bold;
+                font-size: ;
+                padding:0.433em 0 0.433em 0;
+            }
+            &__btn{
+                padding: 0.4em 0.6em;
+                background-color: #75c411;
+                color: white;
+                border-radius: 0.2em;
+                font-family: Arial;
+                font-weight: bold;
+                font-size: 1.250em;
+                border-radius: 0.2em;
+                height: 1.8em;
+                width: 5.75em;
+            }
+            &__star{
+                font-family: Arial;
+                font-size: 0.813em;
+                font-weight: bold;
+                position: absolute;
+                margin-top:0.5em;
+    
+            }
+            &__text{
+                margin-left: 1.7em;
+            }
+            &__img{
+                position: absolute;
+            }
+        }
+        .service--opt{
+            .service;
+            width: 22.500em;
+            min-width: 22.500em;
+            height: 44.063em;
+            margin: 1.875em 1.313em 4.375em 1.313em;
+            -webkit-box-shadow: 0 0.750em 1.125em 0 rgba(0, 0, 0, 0.29);
+            -moz-box-shadow:    0 0.750em 1.125em 0 rgba(0, 0, 0, 0.29);
+            box-shadow:        0 0.750em 1.125em 0 rgba(0, 0, 0, 0.29);
+            .service__name{
+                background-color: #f06e05;
+                height: 3.55em;
+                line-height: 3.5em;
+                &:after{
+                border-top: 0.458em solid  #f06e05;
+                }   
+            }
+            .service__discount{
+                width: 19.500em;
+                &:after{
+                    border-left: 9.750em solid transparent;
+                    border-right: 9.750em solid transparent;
+                }
+            }
+            .service__btn{
+                margin-top: 0.8em;
+            }
+            .service__description{
+                padding: 0 1.9em 0 1.313em;
+            }
+            .service__label{
+                background-color: #df403c;
+                &:before{
+                    border-top: 0.688em solid  #df403c;
+                }
+            }
+        }
+    
+    
+    
